@@ -1,5 +1,5 @@
-# Boilerplate.Web.App
-This is React Boilerplate Project
+# ASP-CORE-REACT-EXAMPLE
+This is React Boilerplate Project with ASP CORE
 Steps: 
 1. clone this in visual studio 2017
 2. open project folder in cmd
