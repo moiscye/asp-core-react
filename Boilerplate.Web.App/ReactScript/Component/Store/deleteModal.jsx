@@ -37,12 +37,7 @@ class ModalExampleSize extends Component {
               </p>
             </Modal.Content>
             <Modal.Actions>
-              <Button
-                color="black"
-                onClick={() => {
-                  this.props.closeDeleteModal();
-                }}
-              >
+              <Button color="black" onClick={this.props.closeDeleteModal}>
                 Cancel
               </Button>
               <Button

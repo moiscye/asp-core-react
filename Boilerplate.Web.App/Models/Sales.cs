@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace Boilerplate.Web.App.Models
 {
-    public partial class Sales
+    public class Sales
     {
+        [Key]
         public int Id { get; set; }
         public int ProductId { get; set; }
         public int CustomerId { get; set; }

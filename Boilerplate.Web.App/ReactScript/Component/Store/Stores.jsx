@@ -2,6 +2,7 @@ import * as React from "react";
 import { Button, Table } from "semantic-ui-react";
 import ModalExampleDimmer from "./storeModal";
 import ModalExampleSize from "./deleteModal";
+import PaginationExampleCustomization from "../pagination";
 import axios from "axios";
 
 export default class Stores extends React.Component {
@@ -26,14 +27,20 @@ export default class Stores extends React.Component {
     this.closeModal = this.closeModal.bind(this);
     this.closeDeleteModal = this.closeDeleteModal.bind(this);
     this.onValueChange = this.onValueChange.bind(this);
+    this.handlePaginationChange = this.handlePaginationChange.bind(this);
   }
   componentDidMount() {
-    this.loadData();
+    this.loadData(1);
   }
 
-  loadData() {
+  loadData(activePage) {
     axios
-      .get("/api/Stores")
+      .get("/api/Stores", {
+        params: {
+          page: activePage,
+          numPerPage: 5
+        }
+      })
       .then(res => {
         this.setState({
           storeList: res.data
@@ -128,6 +135,10 @@ export default class Stores extends React.Component {
       .catch(error => alert(error));
   }
 
+  handlePaginationChange = (e, { activePage }) => {
+    this.loadData(activePage);
+  };
+
   render() {
     let storeList = this.state.storeList;
 
@@ -180,6 +191,9 @@ export default class Stores extends React.Component {
 
           <Table.Body>{tableData}</Table.Body>
         </Table>
+        <PaginationExampleCustomization
+          handlePaginationChange={this.handlePaginationChange}
+        />
         {this.state.showModal && (
           <ModalExampleDimmer
             showModal={this.state.showModal}

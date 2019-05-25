@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace Boilerplate.Web.App.Models
 {
-    public partial class SalesDBContext : DbContext
+    public class SalesDBContext : DbContext
     {
         public SalesDBContext()
         {

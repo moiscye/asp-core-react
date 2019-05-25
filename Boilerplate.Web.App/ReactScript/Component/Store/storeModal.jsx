@@ -66,12 +66,7 @@ class ModalExampleDimmer extends Component {
             </Form>
           </Modal.Content>
           <Modal.Actions>
-            <Button
-              color="black"
-              onClick={() => {
-                this.props.closeModal();
-              }}
-            >
+            <Button color="black" onClick={this.props.closeModal}>
               Cancel
             </Button>
             <Button

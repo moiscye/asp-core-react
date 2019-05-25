@@ -3,9 +3,8 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Customers from "./Customer/Customers";
 import Products from "./Product/Products";
 import Stores from "./Store/Stores";
-import Sales from "./Sales";
+import Sales from "./Sales/Sales";
 import Notfound from "./not-found";
-
 import HeaderMenu from "./HeaderMenu";
 class Navigation extends React.Component {
   render() {
@@ -14,8 +13,8 @@ class Navigation extends React.Component {
         <HeaderMenu
           onItemClick={item => this.onItemClick(item)}
           items={[
-            // ["Home", "/"],
-            ["Customers", "/"],
+            ["React", "/customers"],
+            ["Customers", "/customers"],
             ["Products", "/product"],
             ["Stores", "/stores"],
             ["Sales", "/sales"]
@@ -29,6 +28,7 @@ class Navigation extends React.Component {
           <Route path="/product" component={Products} />
           <Route path="/stores" component={Stores} />
           <Route path="/sales" component={Sales} />
+
           <Route component={Notfound} />
         </Switch>
       </Router>
