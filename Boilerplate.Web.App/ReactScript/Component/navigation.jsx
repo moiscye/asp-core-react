@@ -5,6 +5,7 @@ import Products from "./Product/Products";
 import Stores from "./Store/Stores";
 import Sales from "./Sales/Sales";
 import Notfound from "./not-found";
+import Home from "./home";
 import HeaderMenu from "./HeaderMenu";
 class Navigation extends React.Component {
   render() {
@@ -13,7 +14,7 @@ class Navigation extends React.Component {
         <HeaderMenu
           onItemClick={item => this.onItemClick(item)}
           items={[
-            ["React", "/customers"],
+            ["React", "/"],
             ["Customers", "/customers"],
             ["Products", "/product"],
             ["Stores", "/stores"],
@@ -23,7 +24,7 @@ class Navigation extends React.Component {
         />
 
         <Switch>
-          <Route exact path="/" component={Customers} />
+          <Route exact path="/" component={Home} />
           <Route path="/customers" component={Customers} />
           <Route path="/product" component={Products} />
           <Route path="/stores" component={Stores} />

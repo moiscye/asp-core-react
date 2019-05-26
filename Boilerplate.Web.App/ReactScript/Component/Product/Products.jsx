@@ -151,7 +151,6 @@ export default class Products extends React.Component {
           <Table.Cell>
             <Button
               color="yellow"
-              // onClick={this.openProductModalEdit.bind(this, product)}
               onClick={this.openProductModalEdit.bind(this, product)}
             >
               <i aria-hidden="true" className="edit  icon" />
