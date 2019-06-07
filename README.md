@@ -7,4 +7,6 @@ Steps:
 4. 'npm run start'
 5. Create your DB with the Script attached.
 6. Change the connection string wherever relevant to match your connection
-6. now run project from visual studio enjoy!!
+7. now run project from visual studio enjoy!!
+
+You can Check the final example https://nuevoservicio.azurewebsites.net/
